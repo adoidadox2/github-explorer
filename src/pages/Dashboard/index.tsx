@@ -19,7 +19,9 @@ const Dashboard: React.FC = () => {
   const [newRepo, setNewRepo] = useState('');
   const [repositories, setRepositories] = useState<Repository[]>([]);
 
-  async function handleAddRepository(event: FormEvent<HTMLFormElement>) {
+  async function handleAddRepository(
+    event: FormEvent<HTMLFormElement>,
+  ): Promise<void> {
     event.preventDefault();
 
     const response = await api.get<Repository>(`repos/${newRepo}`);
