@@ -25,6 +25,8 @@
         "prettier"
     ],
     "rules": {
+      "no-unused-vars": "off",
+      "react/jsx-one-expression-per-line":"off",
       "no-use-before-define": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
